@@ -46,9 +46,10 @@ export interface TweetCreator {
 }
 
 export interface Tweet {
-  id?: string;
+  id?: string;  
   title: string;
-  messageContent: string;
+  messageContent: string; 
+  
   mediaUrl?: string;
   creationTimesTamp: string;
   Creator: TweetCreator;
