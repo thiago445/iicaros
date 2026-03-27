@@ -12,17 +12,17 @@ export function TweetCard({ tweet }: TweetCardProps) {
   return (
     <article className="tweet-card border-b border-zinc-800 p-4 flex gap-3 cursor-pointer">
       <Avatar
-        src={tweet.Creator?.urlProfile}
-        name={tweet.Creator?.name || tweet.Creator?.nickName}
+        src={tweet.Creator?.urlImage}
+        name={tweet.Creator?.name || tweet.Creator?.nickname}
         size="md"
       />
       <div className="flex-1 min-w-0">
         {/* Header */}
         <div className="flex items-center gap-2 flex-wrap">
           <span className="font-semibold text-white text-sm">
-            {tweet.Creator?.nickName || tweet.Creator?.name || 'Usuário'}
+            {tweet.Creator?.nickname || tweet.Creator?.name || 'Usuário'}
           </span>
-          {tweet.Creator?.name && tweet.Creator?.nickName && (
+          {tweet.Creator?.name && tweet.Creator?.nickname && (
             <span className="text-zinc-500 text-sm">@{tweet.Creator.name.toLowerCase().replace(/\s+/g, '')}</span>
           )}
           <span className="text-zinc-600 text-xs">·</span>

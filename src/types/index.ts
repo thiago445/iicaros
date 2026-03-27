@@ -39,10 +39,10 @@ export interface Profile {
 
 // Tweet
 export interface TweetCreator {
+  userId: string;
   name: string;
-  nickName?: string;
-  urlProfile?: string;
-  role?: string;
+  nickname: string;
+  urlImage: string;
 }
 
 export interface Tweet {
